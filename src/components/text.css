@@ -1,0 +1,54 @@
+/********************************
+**************Text***************
+********************************/
+
+h1 {
+  color: var(--secondary);
+  font-size: 4rem;
+  font-family: 'Markazi Text', sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--textPrimary);
+  font-family: 'Markazi Text', sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--textPrimary);
+  font-family: 'Karla', sans-serif;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--textPrimary);
+  font-family: 'Karla', sans-serif;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--textPrimary);
+  font-family: 'Karla', sans-serif;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--textPrimary);
+  font-family: 'Karla', sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: var(--textPrimary);
+}
+
+
