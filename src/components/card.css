@@ -49,6 +49,10 @@
     padding: 20px;
 }
 
+.textContainer {
+    padding: 15px 0;
+}
+
 @media (min-width: 1024px) {
     .cardMainContainer {
         display: flex;
