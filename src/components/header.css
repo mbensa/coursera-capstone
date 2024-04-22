@@ -1,0 +1,59 @@
+/********************************
+********Header Component*********
+********************************/
+
+.headerImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.headerBg {
+    background-color: var(--primary);
+    padding: 20px;
+}
+
+.headerContainer {
+    text-align: left;
+    display: flex;
+    max-width: 1440px;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.textColor {
+    color: var(--white);
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: space-around;
+}
+
+.descriptionText {
+    width: 60%;
+}
+
+.btn {
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .headerImg {
+        width: 310px;
+        height: 390px;
+        margin-bottom: -67px;
+    }
+
+    .btn {
+        margin: 0;
+    }
+
+    .descriptionTextMobile {
+        padding: 50px 50px 50px 0;
+    }
+}

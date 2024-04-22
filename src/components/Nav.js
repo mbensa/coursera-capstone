@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as Logo } from "../assets/Logo .svg";
-import { ReactComponent as Basket } from "../assets/basket .svg";
+import { ReactComponent as Logo } from "../assets/Logo.svg";
+import { ReactComponent as Basket } from "../assets/basket.svg";
 import Text from "./Text";
 import "./nav.css";
 

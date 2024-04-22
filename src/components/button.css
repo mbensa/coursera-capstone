@@ -1,0 +1,22 @@
+/********************************
+********Button Component*********
+********************************/
+.btn {
+  padding: 19px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--secondary);
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (max-width: 1024px) {
+  .btn {
+    padding: 8px 16px;
+    border-radius: 16px;
+    width: 150px;
+  }
+}

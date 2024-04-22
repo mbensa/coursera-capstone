@@ -1,0 +1,68 @@
+.imgContainer {
+    height: 250px;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.imgOne {
+    background-image: url(../assets/greekSalad.jpg);
+}
+
+.imgTwo {
+    background-image: url(../assets/bruschetta.jpg);
+}
+
+.imgThree {
+    background-image: url(../assets/lemonDessert.jpg);
+}
+
+.cardMainContainer {
+    padding-bottom: 20px;
+}
+
+.dishTitle {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.dishPrice {
+    color: var(--pink);
+}
+
+.deliveryContainer {
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.deliveryText {
+    padding-right: 10px;
+}
+
+.orderBtn {
+    padding:20px 0;
+}
+
+.sectionContainer {
+    padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    .cardMainContainer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .cardContainer {
+        width: 33%;
+        background-color: var(--textSecondary);
+    }
+
+    .sectionContainer {
+        padding: 50px 20px 50px 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
