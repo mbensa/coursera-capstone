@@ -1,0 +1,25 @@
+.aboutImgContainer {
+    height: 200px;
+    background-image: url(../assets/marioAndadrian.jpg);
+    background-size: cover;
+}
+
+.aboutTextContainer {
+    padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    .aboutContainer {
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .aboutTextContainer {
+        padding: 0 20px;
+    }
+
+    .aboutImgContainer {
+        width: 350px;
+    }
+}

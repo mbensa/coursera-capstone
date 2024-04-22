@@ -1,0 +1,31 @@
+/********************************
+******Social Media Copmonent*****
+********************************/
+
+.social > path {
+  fill: white;
+}
+
+.facebook:hover > path {
+  fill: url(#b);
+}
+
+.youtube:hover > path {
+  fill: url(#f);
+}
+
+.twitter:hover > path {
+  fill: url(#e);
+}
+
+.pinterest:hover > path {
+  fill: url(#d);
+}
+
+.instagram:hover > path {
+  fill: url(#c);
+}
+
+.social {
+  cursor: pointer;
+}

@@ -6,7 +6,7 @@ import persona2 from "../assets/persona2.jpg";
 import persona3 from "../assets/persona3.jpg";
 import persona4 from "../assets/persona4.jpg";
 
-export default function Card() {
+export default function Testimonials() {
   return (
     <section className="sectionTestimonialsContainer">
       <Text type="h2" className="testimonialsTitle">
