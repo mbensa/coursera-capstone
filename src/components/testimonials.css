@@ -1,0 +1,53 @@
+.sectionTestimonialsContainer {
+    padding: 20px;
+    background-color: var(--orange);
+}
+
+.testimonialscardContainer {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.testimonialsImgContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    padding: 10px 0;
+}
+
+.testimonialsImg {
+    border: 1px solid var(--textPrimary);
+    margin-right: 20px;
+}
+
+@media (min-width: 1024px) {
+    .sectionTestimonialsContainer {
+        margin: 0 auto;
+    }
+
+    .testimonialsTitle {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .testimonialsContainer {
+        display: flex;
+        justify-content: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        gap: 10px
+        ;
+    }
+
+    .testimonialscardContainer {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 250px;
+    }
+
+    .testimonialsImg {
+        height: 100px;
+    }
+}
