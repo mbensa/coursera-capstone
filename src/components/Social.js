@@ -6,8 +6,6 @@ import { ReactComponent as Twitter } from "../assets/twitter.svg";
 import { ReactComponent as Youtube } from "../assets/youtube.svg";
 
 export default function Social(props) {
-  const { socialClass } = props;
-
   return (
     <div className="socialContainer">
       <Facebook className="facebook social" />

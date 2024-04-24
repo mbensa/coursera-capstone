@@ -1,99 +1,73 @@
 import React from "react";
-import "./bookingForm.css";
-import Text from "../components/Text";
 
-const BookingForm = ({ availableTimes, updateTimes }) => {
-  const handleDateChange = (e) => {
-    // Dispatch state change when the date field is changed
-    updateTimes(e.target.value);
+function BookingForm({
+  date,
+  setDate,
+  time,
+  setTime,
+  guests,
+  setGuests,
+  occasion,
+  setOccasion,
+  availableTimes,
+  updateTimes, // New prop to dispatch state change
+}) {
+  const handleDateChange = (event) => {
+    const newDate = event.target.value;
+    setDate(newDate);
+    // Dispatch state change with the newly selected date
+    updateTimes(newDate);
   };
 
-  const handleTimeChange = (e) => {
-    // Handle time change
-  };
-
-  const handleGuestsChange = (e) => {
-    // Handle number of guests change
-  };
-
-  const handleOccasionChange = (e) => {
-    // Handle occasion change
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted!");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Submitted");
   };
 
   return (
     <form
-      className="formContainer"
+      style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
       onSubmit={handleSubmit}
-      aria-labelledby="booking-form"
     >
-      <label htmlFor="res-date">
-        <Text type="h5">Choose date</Text>
-      </label>
+      <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
         id="res-date"
-        onChange={handleDateChange}
-        aria-label="Choose date"
-        aria-required="true"
+        value={date}
+        onChange={handleDateChange} // Call handleDateChange on change
       />
-
-      <label htmlFor="res-time">
-        <Text type="h5">Choose time</Text>
-      </label>
+      <label htmlFor="res-time">Choose time</label>
       <select
         id="res-time"
-        onChange={handleTimeChange}
-        aria-label="Choose time"
+        value={time}
+        onChange={(e) => setTime(e.target.value)}
       >
-        {availableTimes.map((t) => (
-          <option key={t}>{t}</option>
+        {availableTimes.map((availableTime, index) => (
+          <option key={index}>{availableTime}</option>
         ))}
       </select>
-
-      <label htmlFor="guests">
-        <Text type="h5">Number of Guests</Text>
-      </label>
+      <label htmlFor="guests">Number of guests</label>
       <input
         type="number"
         placeholder="1"
         min="1"
         max="10"
         id="guests"
-        onChange={handleGuestsChange}
-        aria-label="Number of guests"
-        aria-required="true"
+        value={guests}
+        onChange={(e) => setGuests(parseInt(e.target.value))}
       />
-
-      <label htmlFor="occasion">
-        <Text type="h5">Occasion</Text>
-      </label>
+      <label htmlFor="occasion">Occasion</label>
       <select
         id="occasion"
-        onChange={handleOccasionChange}
-        aria-label="Occasion"
+        value={occasion}
+        onChange={(e) => setOccasion(e.target.value)}
       >
-        <option value="Birthday">
-          <Text type="p">Birthday</Text>
-        </option>
-        <option value="Anniversary">
-          <Text type="p">Anniversary</Text>
-        </option>
+        <option>Birthday</option>
+        <option>Anniversary</option>
       </select>
-
-      <input
-        className="submitButton"
-        type="submit"
-        value="Make Your reservation"
-        aria-label="Submit reservation"
-      />
+      <input type="submit" value="Make Your reservation" />
     </form>
   );
-};
+}
 
 export default BookingForm;
