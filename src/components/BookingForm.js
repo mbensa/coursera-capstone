@@ -7,6 +7,8 @@ import "./bookingForm.css";
 function BookingForm({
   date,
   setDate,
+  name,
+  setName,
   time,
   setTime,
   guests,
@@ -22,17 +24,18 @@ function BookingForm({
     time: "",
     guests: 1,
     occasion: "Birthday",
+    name: "",
   });
 
   const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
     // Check if all form fields are valid
-    const isValid = date && time && guests >= 1 && occasion !== "";
+    const isValid = name && date && time && guests >= 1 && occasion !== "";
 
     // Update form validity state
     setFormValid(isValid);
-  }, [date, time, guests, occasion]);
+  }, [date, time, guests, occasion, name]);
 
   const handleDateChange = (event) => {
     const newDate = event.target.value;
@@ -46,7 +49,7 @@ function BookingForm({
   const handleSubmit = (event) => {
     event.preventDefault();
     if (formValid) {
-      submitForm({ date, time, guests, occasion });
+      submitForm({ date, time, guests, occasion, name });
     }
   };
 
@@ -57,6 +60,17 @@ function BookingForm({
         <Text type="h1">Book a table</Text>
         <div className="restaurantImg"></div>
         <form className="formContainer" onSubmit={handleSubmit}>
+          <label htmlFor="res-name">
+            <Text type="h5">Name and Surname</Text>
+          </label>
+          <input
+            type="text"
+            id="res-name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            aria-label="Name input"
+          />
           <label htmlFor="res-date">
             <Text type="h5">Choose Date</Text>
           </label>

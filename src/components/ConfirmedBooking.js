@@ -8,7 +8,7 @@ export default function ConfirmedBooking() {
     <div className="confirmedBookingContainer">
       <img src={tick2} alt="tick confirming reservation" />
       <Text type="h2">Thank you</Text>
-      <Text type="p">Your reservation has been confirmed.</Text>
+      <Text type="p">Your booking has been confirmed.</Text>
     </div>
   );
 }

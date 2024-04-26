@@ -18,7 +18,6 @@ const updateTimesReducer = (state, action) => {
   }
 };
 
-// Function to initialize availableTimes using the fake API
 export const initializeTimes = () => {
   // Create a Date object to represent today's date
   const today = new Date();
@@ -49,6 +48,7 @@ function App() {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
   const navigate = useNavigate(); // Initialize useNavigate hook
+  const [name, setName] = useState("");
 
   // useEffect to initialize availableTimes when component mounts
   useEffect(() => {
@@ -83,6 +83,8 @@ function App() {
           element={
             <BookingForm
               date={date}
+              name={name}
+              setName={setName}
               setDate={setDate}
               time={time}
               setTime={setTime}

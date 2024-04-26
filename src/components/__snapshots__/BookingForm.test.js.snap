@@ -2,94 +2,248 @@
 
 exports[`<BookingForm /> should render 1`] = `
 <DocumentFragment>
-  <form
-    style="display: grid; max-width: 200px; gap: 20px;"
+  <nav
+    class="navbar"
   >
-    <label
-      for="res-date"
+    <div
+      class="hamburger"
     >
-      Choose date
-    </label>
-    <input
-      data-testid="resDate"
-      id="res-date"
-      type="date"
-      value="Mon Jan 01 2024 01:00:00 GMT+0100 (Central European Standard Time)"
+      <span
+        class="bar"
+      />
+      <span
+        class="bar"
+      />
+      <span
+        class="bar"
+      />
+    </div>
+    <svg>
+      Logo.svg
+    </svg>
+    <ul
+      class="nav-menu"
+    >
+      <li
+        class="nav-item"
+      >
+        <a
+          href="/"
+        >
+          <h5>
+            Home
+          </h5>
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <h5>
+          About
+        </h5>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <h5>
+          Menu
+        </h5>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          href="/booking"
+        >
+          <h5>
+            Reservations
+          </h5>
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <h5>
+          Order Online
+        </h5>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <h5>
+          Login
+        </h5>
+      </li>
+    </ul>
+    <svg
+      class="basketLogo"
+    >
+      basket.svg
+    </svg>
+  </nav>
+  <main
+    class="mainContainerBooking"
+  >
+    <h1>
+      Book a table
+    </h1>
+    <div
+      class="restaurantImg"
     />
-    <label
-      for="res-time"
+    <form
+      class="formContainer"
     >
-      Choose time
-    </label>
-    <select
-      id="res-time"
+      <label
+        for="res-name"
+      >
+        <h5>
+          Name and Surname
+        </h5>
+      </label>
+      <input
+        aria-label="Name input"
+        id="res-name"
+        required=""
+        type="text"
+        value="foo"
+      />
+      <label
+        for="res-date"
+      >
+        <h5>
+          Choose Date
+        </h5>
+      </label>
+      <input
+        aria-label="Date Selection"
+        data-testid="resDate"
+        id="res-date"
+        min="2024-04-26"
+        required=""
+        type="date"
+        value="Mon Jan 01 2024 01:00:00 GMT+0100 (Central European Standard Time)"
+      />
+      <label
+        for="res-time"
+      >
+        <h5>
+          Choose Time
+        </h5>
+      </label>
+      <select
+        aria-label="Time Selection"
+        id="res-time"
+        required=""
+      >
+        <option>
+          --- Select a Time ---
+        </option>
+        <option>
+          17:00
+        </option>
+        <option>
+          18:00
+        </option>
+        <option>
+          19:00
+        </option>
+        <option>
+          19:30
+        </option>
+        <option>
+          20:00
+        </option>
+        <option>
+          20:30
+        </option>
+        <option>
+          21:00
+        </option>
+        <option>
+          21:30
+        </option>
+        <option>
+          22:30
+        </option>
+        <option>
+          23:30
+        </option>
+      </select>
+      <label
+        for="guests"
+      >
+        <h5>
+          Number of Guests
+        </h5>
+      </label>
+      <input
+        aria-label="Guests Selection"
+        id="guests"
+        max="10"
+        min="1"
+        placeholder="1"
+        required=""
+        type="number"
+        value="1"
+      />
+      <label
+        for="occasion"
+      >
+        <h5>
+          Occassion
+        </h5>
+      </label>
+      <select
+        aria-label="Occasion Selection"
+        id="occasion"
+        required=""
+      >
+        <option>
+          Birthday
+        </option>
+        <option>
+          Anniversary
+        </option>
+      </select>
+      <input
+        aria-label="Submit Reservation"
+        class="submitBtn"
+        disabled=""
+        type="submit"
+        value="Make Your reservation"
+      />
+    </form>
+  </main>
+  <footer
+    class="footerContainer"
+  >
+    <svg>
+      Logo.svg
+    </svg>
+    <div
+      class="socialContainer"
     >
-      <option>
-        --- Select a Time ---
-      </option>
-      <option>
-        17:00
-      </option>
-      <option>
-        18:00
-      </option>
-      <option>
-        19:00
-      </option>
-      <option>
-        19:30
-      </option>
-      <option>
-        20:00
-      </option>
-      <option>
-        20:30
-      </option>
-      <option>
-        21:00
-      </option>
-      <option>
-        21:30
-      </option>
-      <option>
-        22:30
-      </option>
-      <option>
-        23:30
-      </option>
-    </select>
-    <label
-      for="guests"
-    >
-      Number of guests
-    </label>
-    <input
-      id="guests"
-      max="10"
-      min="1"
-      placeholder="1"
-      type="number"
-      value="1"
-    />
-    <label
-      for="occasion"
-    >
-      Occasion
-    </label>
-    <select
-      id="occasion"
-    >
-      <option>
-        Birthday
-      </option>
-      <option>
-        Anniversary
-      </option>
-    </select>
-    <input
-      type="submit"
-      value="Make Your reservation"
-    />
-  </form>
+      <svg
+        class="facebook social"
+      >
+        facebook.svg
+      </svg>
+      <svg
+        class="youtube social"
+      >
+        youtube.svg
+      </svg>
+      <svg
+        class="twitter social"
+      >
+        twitter.svg
+      </svg>
+      <svg
+        class="instagram social"
+      >
+        instagram.svg
+      </svg>
+    </div>
+  </footer>
 </DocumentFragment>
 `;

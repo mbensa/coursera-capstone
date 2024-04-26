@@ -75,6 +75,6 @@ describe("<App />", () => {
 
     expect(setItemSpy).toHaveBeenCalledTimes(1);
 
-    expect(getByText("Your booking has been confirmed")).toBeInTheDocument();
+    expect(getByText("Your booking has been confirmed.")).toBeInTheDocument();
   });
 });

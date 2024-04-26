@@ -32,9 +32,13 @@ exports[`<App /> should render 1`] = `
             <li
               class="nav-item"
             >
-              <h5>
-                Home
-              </h5>
+              <a
+                href="/"
+              >
+                <h5>
+                  Home
+                </h5>
+              </a>
             </li>
             <li
               class="nav-item"
@@ -53,9 +57,13 @@ exports[`<App /> should render 1`] = `
             <li
               class="nav-item"
             >
-              <h5>
-                Reservations
-              </h5>
+              <a
+                href="/booking"
+              >
+                <h5>
+                  Reservations
+                </h5>
+              </a>
             </li>
             <li
               class="nav-item"
@@ -100,13 +108,17 @@ exports[`<App /> should render 1`] = `
               >
                 We are a family owned Mediterranean restaurant, focused on traditional recipes with a modern twist.
               </h4>
-              <div
-                class="btn"
+              <a
+                href="/booking"
               >
-                <h5>
-                  Reserve a Table
-                </h5>
-              </div>
+                <div
+                  class="btn"
+                >
+                  <h5>
+                    Reserve a Table
+                  </h5>
+                </div>
+              </a>
             </div>
             <div>
               <img
