@@ -1,35 +1,44 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, act } from "@testing-library/react";
 import BookingForm from "./BookingForm";
-import { initializeTimes } from "../App";
-import { updateTimes } from "../App";
+import fakeAPI from "./FakeAPI";
+// import { initializeTimes } from "../App";
+// import { updateTimes } from "../App";
 
-test('renders "Choose date" label', () => {
-  render(<BookingForm />);
-  const chooseDateLabel = screen.getByText("Choose date");
-  expect(chooseDateLabel).toBeInTheDocument();
-});
+const props = {
+  date: new Date("2024-01-01"),
+  time: "",
+  guests: 1,
+  occasion: "birthday",
+  availableTimes: fakeAPI.fetchAPI(new Date("2024-01-01")),
+};
 
-test("initializeTimes returns the correct initial available times", () => {
-  const expectedAvailableTimes = [
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ];
+describe("<BookingForm />", () => {
+  it("should render", () => {
+    const { asFragment } = render(<BookingForm {...props} />);
 
-  const actualAvailableTimes = initializeTimes();
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-  expect(actualAvailableTimes).toEqual(expectedAvailableTimes);
-});
+  it('renders "Choose date" label', () => {
+    const { getByLabelText } = render(<BookingForm {...props} />);
 
-test("updateTimes returns the same value as provided in the state", () => {
-  const initialState = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    expect(getByLabelText("Choose date")).toBeInTheDocument();
+  });
 
-  const selectedDate = "2024-04-25";
+  it("updateTimes returns the same value as provided in the state", () => {
+    const selectedDate = "2024-04-25";
+    const updateTimesSpy = jest.fn();
 
-  const updatedAvailableTimes = updateTimes(initialState, selectedDate);
+    const { getByTestId } = render(
+      <BookingForm {...props} updateTimes={updateTimesSpy} />
+    );
 
-  expect(updatedAvailableTimes).toEqual(initialState);
+    act(() => {
+      fireEvent.change(getByTestId("resDate"), {
+        target: { value: selectedDate },
+      });
+    });
+
+    expect(updateTimesSpy).toHaveBeenCalledWith(selectedDate);
+  });
 });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function BookingForm({
   date,
@@ -10,18 +10,29 @@ function BookingForm({
   occasion,
   setOccasion,
   availableTimes,
-  updateTimes, // New prop to dispatch state change
+  updateTimes,
+  submitForm, // Receive submitForm as a prop
 }) {
+  const [formData, setFormData] = useState({
+    date: "",
+    time: "",
+    guests: 1,
+    occasion: "Birthday",
+  });
+
   const handleDateChange = (event) => {
     const newDate = event.target.value;
-    setDate(newDate);
-    // Dispatch state change with the newly selected date
+    setFormData((prevData) => ({
+      ...prevData,
+      date: newDate,
+    }));
     updateTimes(newDate);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submitted");
+    // Call submitForm and pass formData as a parameter
+    submitForm(formData);
   };
 
   return (
@@ -31,10 +42,11 @@ function BookingForm({
     >
       <label htmlFor="res-date">Choose date</label>
       <input
+        data-testid="resDate"
         type="date"
         id="res-date"
         value={date}
-        onChange={handleDateChange} // Call handleDateChange on change
+        onChange={handleDateChange}
       />
       <label htmlFor="res-time">Choose time</label>
       <select

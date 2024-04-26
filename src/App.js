@@ -2,8 +2,9 @@ import React, { useState, useReducer, useEffect } from "react";
 import "./App.css";
 import BookingForm from "./components/BookingForm";
 import MainPage from "./pages/MainPage";
+import ConfirmedBooking from "./components/ConfirmedBooking"; // Import the ConfirmedBooking component
 import fakeAPI from "./components/FakeAPI";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 // Define reducer function to handle state changes
 const updateTimesReducer = (state, action) => {
@@ -18,7 +19,7 @@ const updateTimesReducer = (state, action) => {
 };
 
 // Function to initialize availableTimes using the fake API
-const initializeTimes = () => {
+export const initializeTimes = () => {
   // Create a Date object to represent today's date
   const today = new Date();
   // Call the fetchAPI function with today's date to fetch available times
@@ -47,6 +48,7 @@ function App() {
   const [time, setTime] = useState("17:00");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   // useEffect to initialize availableTimes when component mounts
   useEffect(() => {
@@ -58,6 +60,17 @@ function App() {
     // Dispatch action to update availableTimes based on selectedDate
     dispatch({ type: "UPDATE_TIMES", payload: selectedDate });
     setDate(selectedDate); // Update the date state
+  };
+
+  // Function to submit form data
+  const submitForm = (formData) => {
+    // Update local storage
+    localStorage.setItem("formData", JSON.stringify(formData));
+    // Call submitAPI with form data and check if it returns true
+    if (fakeAPI.submitAPI(formData)) {
+      // If submission is successful, navigate to the confirmed booking page
+      navigate("/booking-confirmed");
+    }
   };
 
   return (
@@ -79,9 +92,12 @@ function App() {
               setOccasion={setOccasion}
               availableTimes={availableTimes}
               updateTimes={handleDateChange} // Pass handleDateChange as updateTimes
+              submitForm={submitForm} // Pass submitForm as onSubmit
             />
           }
         />
+        <Route path="/booking-confirmed" element={<ConfirmedBooking />} />{" "}
+        {/* Define route for confirmed booking page */}
       </Routes>
     </div>
   );

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookingForm /> should render 1`] = `
+<DocumentFragment>
+  <form
+    style="display: grid; max-width: 200px; gap: 20px;"
+  >
+    <label
+      for="res-date"
+    >
+      Choose date
+    </label>
+    <input
+      data-testid="resDate"
+      id="res-date"
+      type="date"
+      value="Mon Jan 01 2024 01:00:00 GMT+0100 (Central European Standard Time)"
+    />
+    <label
+      for="res-time"
+    >
+      Choose time
+    </label>
+    <select
+      id="res-time"
+    >
+      <option>
+        --- Select a Time ---
+      </option>
+      <option>
+        17:00
+      </option>
+      <option>
+        18:00
+      </option>
+      <option>
+        19:00
+      </option>
+      <option>
+        19:30
+      </option>
+      <option>
+        20:00
+      </option>
+      <option>
+        20:30
+      </option>
+      <option>
+        21:00
+      </option>
+      <option>
+        21:30
+      </option>
+      <option>
+        22:30
+      </option>
+      <option>
+        23:30
+      </option>
+    </select>
+    <label
+      for="guests"
+    >
+      Number of guests
+    </label>
+    <input
+      id="guests"
+      max="10"
+      min="1"
+      placeholder="1"
+      type="number"
+      value="1"
+    />
+    <label
+      for="occasion"
+    >
+      Occasion
+    </label>
+    <select
+      id="occasion"
+    >
+      <option>
+        Birthday
+      </option>
+      <option>
+        Anniversary
+      </option>
+    </select>
+    <input
+      type="submit"
+      value="Make Your reservation"
+    />
+  </form>
+</DocumentFragment>
+`;

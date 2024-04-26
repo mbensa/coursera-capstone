@@ -21,9 +21,7 @@ export default function Nav() {
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-
       <Logo></Logo>
-
       <ul className={`nav-menu${toggle ? " active" : ""}`}>
         <li className="nav-item">
           <Text type="h5">Home</Text>
@@ -44,7 +42,6 @@ export default function Nav() {
           <Text type="h5">Login</Text>
         </li>
       </ul>
-
       <Basket className="basketLogo" />
     </nav>
   );

@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div>
+      <header>
+        <nav
+          class="navbar"
+        >
+          <div
+            class="hamburger"
+          >
+            <span
+              class="bar"
+            />
+            <span
+              class="bar"
+            />
+            <span
+              class="bar"
+            />
+          </div>
+          <svg>
+            Logo.svg
+          </svg>
+          <ul
+            class="nav-menu"
+          >
+            <li
+              class="nav-item"
+            >
+              <h5>
+                Home
+              </h5>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <h5>
+                About
+              </h5>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <h5>
+                Menu
+              </h5>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <h5>
+                Reservations
+              </h5>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <h5>
+                Order Online
+              </h5>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <h5>
+                Login
+              </h5>
+            </li>
+          </ul>
+          <svg
+            class="basketLogo"
+          >
+            basket.svg
+          </svg>
+        </nav>
+        <div
+          class="headerBg"
+        >
+          <div
+            class="headerContainer"
+          >
+            <div
+              class="mainContainer"
+            >
+              <h1>
+                Little Lemon
+              </h1>
+              <h2
+                class="textColor"
+              >
+                Chicago
+              </h2>
+              <h4
+                class="textColor descriptionTextMobile"
+              >
+                We are a family owned Mediterranean restaurant, focused on traditional recipes with a modern twist.
+              </h4>
+              <div
+                class="btn"
+              >
+                <h5>
+                  Reserve a Table
+                </h5>
+              </div>
+            </div>
+            <div>
+              <img
+                alt="a man holding a tray with food"
+                class="headerImg"
+                src="restaurantFood.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section
+          class="sectionContainer"
+        >
+          <h2>
+            This Weeks Specials
+          </h2>
+          <div
+            class="cardMainContainer"
+          >
+            <div
+              class="cardContainer"
+            >
+              <div
+                class="imgContainer imgOne"
+              />
+              <div
+                class="textContainer"
+              >
+                <div
+                  class="dishTitle"
+                >
+                  <h5>
+                    Greek Salad
+                  </h5>
+                  <h6
+                    class="dishPrice"
+                  >
+                    $12.99
+                  </h6>
+                </div>
+                <p>
+                  The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
+                </p>
+                <div
+                  class="deliveryContainer"
+                >
+                  <h6
+                    class="deliveryText"
+                  >
+                    Order a delivery
+                  </h6>
+                  <img
+                    alt="delivery motorbike"
+                    src="delivery.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="cardContainer"
+            >
+              <div
+                class="imgContainer imgTwo"
+              />
+              <div
+                class="textContainer"
+              >
+                <div
+                  class="dishTitle"
+                >
+                  <h5>
+                    Bruschetta
+                  </h5>
+                  <h6
+                    class="dishPrice"
+                  >
+                    $7.99
+                  </h6>
+                </div>
+                <p>
+                  Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
+                </p>
+                <div
+                  class="deliveryContainer"
+                >
+                  <h6
+                    class="deliveryText"
+                  >
+                    Order a delivery
+                  </h6>
+                  <img
+                    alt="delivery motorbike"
+                    src="delivery.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="cardContainer"
+            >
+              <div
+                class="imgContainer imgThree"
+              />
+              <div
+                class="textContainer"
+              >
+                <div
+                  class="dishTitle"
+                >
+                  <h5>
+                    Lemon Dessert
+                  </h5>
+                  <h6
+                    class="dishPrice"
+                  >
+                    $5.00
+                  </h6>
+                </div>
+                <p>
+                  This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
+                </p>
+                <div
+                  class="deliveryContainer"
+                >
+                  <h6
+                    class="deliveryText"
+                  >
+                    Order a delivery
+                  </h6>
+                  <img
+                    alt="delivery motorbike"
+                    src="delivery.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="btn"
+          >
+            <h5>
+              Online Menu
+            </h5>
+          </div>
+        </section>
+        <section
+          class="sectionTestimonialsContainer"
+        >
+          <h2
+            class="testimonialsTitle"
+          >
+            What customers say about us
+          </h2>
+          <div
+            class="testimonialsContainer"
+          >
+            <div
+              class="testimonialscardContainer"
+            >
+              <h6>
+                Rating: 5
+              </h6>
+              <div
+                class="testimonialsImgContainer"
+              >
+                <img
+                  alt="a young woman with long black hair"
+                  class="testimonialsImg"
+                  src="persona1.jpg"
+                />
+                <h6>
+                  Jamie
+                </h6>
+              </div>
+              <p>
+                "Best dining experience I've ever had. Highly recommend."
+              </p>
+            </div>
+            <div
+              class="testimonialscardContainer"
+            >
+              <h6>
+                Rating: 5
+              </h6>
+              <div
+                class="testimonialsImgContainer"
+              >
+                <img
+                  alt="a man with glasses and short brown hair"
+                  class="testimonialsImg"
+                  src="persona2.jpg"
+                />
+                <h6>
+                  Tom
+                </h6>
+              </div>
+              <p>
+                "The bruschetta was out of this world. I will definitely return"
+              </p>
+            </div>
+            <div
+              class="testimonialscardContainer"
+            >
+              <h6>
+                Rating: 5
+              </h6>
+              <div
+                class="testimonialsImgContainer"
+              >
+                <img
+                  alt="a woman with long curly black hair and glasses"
+                  class="testimonialsImg"
+                  src="persona3.jpg"
+                />
+                <h6>
+                  Katie
+                </h6>
+              </div>
+              <p>
+                "Don't skip the dessert, the lemon pie was absolutely amazing."
+              </p>
+            </div>
+            <div
+              class="testimonialscardContainer"
+            >
+              <h6>
+                Rating: 5
+              </h6>
+              <div
+                class="testimonialsImgContainer"
+              >
+                <img
+                  alt="a man with short brown hair and a beard"
+                  class="testimonialsImg"
+                  src="persona4.jpg"
+                />
+                <h6>
+                  Rick
+                </h6>
+              </div>
+              <p>
+                "Thanks for the amazing dining experience. We will gladly return."
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="aboutContainer"
+        >
+          <div
+            class="aboutTextContainer"
+          >
+            <h1>
+              Little Lemon
+            </h1>
+            <h2>
+              Chicago
+            </h2>
+            <p>
+              Little Lemon is run by two famous chefs, Mario and Adrian. The restaurant has opened its doors in 2003. We serve Mediterranean food with a modern twist. 
+            </p>
+          </div>
+          <div
+            class="aboutImgContainer"
+          />
+        </section>
+      </main>
+      <footer
+        class="footerContainer"
+      >
+        <svg>
+          Logo.svg
+        </svg>
+        <div
+          class="socialContainer"
+        >
+          <svg
+            class="facebook social"
+          >
+            facebook.svg
+          </svg>
+          <svg
+            class="youtube social"
+          >
+            youtube.svg
+          </svg>
+          <svg
+            class="twitter social"
+          >
+            twitter.svg
+          </svg>
+          <svg
+            class="instagram social"
+          >
+            instagram.svg
+          </svg>
+        </div>
+      </footer>
+    </div>
+  </div>
+</DocumentFragment>
+`;
