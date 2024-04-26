@@ -3,6 +3,7 @@ import { ReactComponent as Logo } from "../assets/Logo.svg";
 import { ReactComponent as Basket } from "../assets/basket.svg";
 import Text from "./Text";
 import "./nav.css";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [toggle, setToggle] = React.useState(false);
@@ -24,7 +25,9 @@ export default function Nav() {
       <Logo></Logo>
       <ul className={`nav-menu${toggle ? " active" : ""}`}>
         <li className="nav-item">
-          <Text type="h5">Home</Text>
+          <Link to="/">
+            <Text type="h5">Home</Text>
+          </Link>
         </li>
         <li className="nav-item">
           <Text type="h5">About</Text>
@@ -33,7 +36,9 @@ export default function Nav() {
           <Text type="h5">Menu</Text>
         </li>
         <li className="nav-item">
-          <Text type="h5">Reservations</Text>
+          <Link to="/booking">
+            <Text type="h5">Reservations</Text>
+          </Link>
         </li>
         <li className="nav-item">
           <Text type="h5">Order Online</Text>

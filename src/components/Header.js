@@ -5,6 +5,7 @@ import Button from "./Button";
 import "./header.css";
 import useMobile from "../hooks/useMobile";
 import restaurantFood from "../assets/restaurantFood.jpg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const { isMobile } = useMobile();
@@ -29,7 +30,9 @@ export default function Header() {
                 className="headerImg"
               />
             </div>
-            <Button>Reserve a Table</Button>
+            <Link to="/booking">
+              <Button>Reserve a Table</Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -49,7 +52,9 @@ export default function Header() {
                 We are a family owned Mediterranean restaurant, focused on
                 traditional recipes with a modern twist.
               </Text>
-              <Button>Reserve a Table</Button>
+              <Link to="/booking">
+                <Button>Reserve a Table</Button>
+              </Link>
             </div>
             <div>
               <img
